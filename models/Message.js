@@ -45,6 +45,5 @@ const messageSchema = new mongoose.Schema(
 
 // Index for efficient queries
 messageSchema.index({ wa_id: 1, timestamp: -1 })
-messageSchema.index({ meta_msg_id: 1 })
 
 module.exports = mongoose.model("Message", messageSchema, "processed_messages")
